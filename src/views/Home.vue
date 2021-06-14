@@ -1,18 +1,25 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="main-page">
+    <Tagline
+    ></Tagline>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Tagline from '@/components/Tagline.vue'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    Tagline
   }
 }
 </script>
+<style scoped lang="scss">
+.main-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+</style>
