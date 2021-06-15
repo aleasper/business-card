@@ -2,17 +2,25 @@
   <div class="main-page">
     <Tagline
     ></Tagline>
+    <AboutMe
+    ></AboutMe>
+    <Skills
+    ></Skills>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import Tagline from '@/components/Tagline.vue'
+import AboutMe from "../components/AboutMe";
+import Skills from "../components/Skills";
 
 export default {
   name: 'Home',
   components: {
-    Tagline
+    Tagline,
+    AboutMe,
+    Skills
   }
 }
 </script>
