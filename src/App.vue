@@ -23,7 +23,12 @@ export default {
 }
 </script>
 <style lang="scss">
+body {
+  margin: 0;
+}
 #app {
+  overflow-y: auto;
+  overflow-x: hidden;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
