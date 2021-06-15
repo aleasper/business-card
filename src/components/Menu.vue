@@ -8,6 +8,7 @@
         <a href="#experience__article">Experience</a>
       </div>
       <router-link to="/portfolio" class="menu-link">Portfolio</router-link>
+      <router-link to="/comments" class="menu-link">Wall</router-link>
     </div>
   </nav>
 </template>
@@ -16,7 +17,6 @@
 export default {
   name: 'Menu',
   props: {
-    msg: String,
   },
   data: ()=> {return {
     currentRoute : '/'
@@ -52,7 +52,7 @@ export default {
 }
 .menu-link {
   text-decoration: none;
-  margin: .6em 0.2em;
+  margin: .6em .4em;
   color: #FFFFFF;
   font-size: 0.9em;
 }
