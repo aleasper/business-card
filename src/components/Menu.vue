@@ -46,23 +46,23 @@ export default {
   font-size: 0.9em;
 }
 .mav-links {
-  margin: 24px 0 0 0;
   display: flex;
   flex-direction: row;
   justify-content: start;
   align-items: center;
   width: 100%;
 }
- /* скрываем чекбокс */
-  #menu-toggle {
-    opacity: 0;
-  }
+/* скрываем чекбокс */
+#menu-toggle {
+  opacity: 0;
+}
 @media all and (max-width: 700px) {
   .navigation{
     flex-direction: column;
     justify-content: start;
   }
   .mav-links {
+    margin: 24px 0 0 0;
     display: flex;
     flex-direction: column;
   }
