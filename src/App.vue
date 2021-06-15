@@ -35,10 +35,10 @@ export default {
     "navigation"
     "main"
     "footer";
-  grid-template-rows: 4em 1fr 2em;
+  grid-template-rows: clamp(36px, 3em, 6em) 1fr 2em;
   grid-template-columns: 1fr;
-  grid-gap: 8px;
-  height: 100%;
+  grid-gap: 0;
+  height: 100vh;
   margin: 0;
 }
 
@@ -47,7 +47,7 @@ export default {
     grid-template-areas: "navigation main"
                           "footer footer";
     grid-template-rows: 1fr 2em;
-    grid-template-columns: clamp(40px, 6em, 10em) 1fr;
+    grid-template-columns: clamp(40px, 5em, 7em) 1fr;
   }
 }
 
@@ -59,6 +59,8 @@ export default {
 }
 #footer {
   grid-area: footer;
+  background: #000000;
+  color: #FFFFFF;
 }
 
 #nav {
