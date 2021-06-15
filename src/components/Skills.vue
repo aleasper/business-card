@@ -77,7 +77,7 @@ ul {
     "skills"
     "header-education"
     "education";
-  grid-template-rows:  2em 1fr 2em 1fr;
+  grid-template-rows:  2em 1fr 2em 0.6fr;
   grid-template-columns: 1fr;
   }
 }

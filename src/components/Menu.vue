@@ -2,6 +2,11 @@
   <nav class="navigation">
     <div class="mav-links">
       <router-link to="/" class="menu-link">Main page</router-link>
+      <div class="page-links" v-if="currentRoute === '/'">
+        <a href="#skills__article">Skills</a>
+        <a href="#education__article">Education</a>
+        <a href="#experience__article">Experience</a>
+      </div>
       <router-link to="/portfolio" class="menu-link">Portfolio</router-link>
     </div>
   </nav>
@@ -11,15 +16,25 @@
 export default {
   name: 'Menu',
   props: {
-    msg: String
+    msg: String,
+  },
+  data: ()=> {return {
+    currentRoute : '/'
+  }},
+  methods: {
+
   },
   mounted() {
-    document.getElementById('menu-toggle').addEventListener('click', function () {
-      let navs = document.getElementsByClassName('navigation');
-      for (let nav of navs){
-        nav.classList.toggle('collapsed');
-      }
-    });
+
+  },
+  computed: {
+  },
+  watch:{
+    $route (){
+      this.currentRoute = this.$router.history.current['path'];
+    }
+  },
+  updated() {
   }
 }
 </script>
@@ -45,13 +60,30 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   margin: 24px 0 0 0;
 }
 /* скрываем чекбокс */
 #menu-toggle {
   opacity: 0;
+}
+
+.page-links {
+  font-size: 0.8em;
+  overflow-wrap: break-word;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 8px;
+}
+.page-links > a {
+  cursor: pointer;
+  margin: 4px 0;
+
+  color: #FFFFFF;
+  text-decoration: none;
 }
 
 @media all and (max-width: 700px) {
@@ -63,6 +95,7 @@ export default {
   .mav-links {
     display: flex;
     flex-direction: row;
+    align-items: center;
     margin: 0 0.2em;
   }
   .menu-link {
@@ -77,6 +110,12 @@ export default {
   .collapsed > .mav-links{
     display: flex;
     align-items: center;
+  }
+  .page-links {
+    flex-direction: row;
+  }
+  .page-links > a {
+    margin: 0 4px;
   }
 }
 
