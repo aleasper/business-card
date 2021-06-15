@@ -37,11 +37,10 @@ body {
 
   display: grid;
   grid-template-areas:
-    "navigation"
-    "main"
-    "footer";
-  grid-template-rows: clamp(36px, 3em, 6em) 1fr 2em;
-  grid-template-columns: 1fr;
+      "navigation main"
+      "footer footer";
+  grid-template-rows: 1fr 2em;
+  grid-template-columns: clamp(40px, 5em, 7em) 1fr;
   grid-gap: 0;
   height: 100vh;
   margin: 0;
@@ -49,10 +48,12 @@ body {
 
 @media all and (max-width: 700px) {
   #app {
-    grid-template-areas: "navigation main"
-                          "footer footer";
-    grid-template-rows: 1fr 2em;
-    grid-template-columns: clamp(40px, 5em, 7em) 1fr;
+    grid-template-areas:
+    "navigation"
+    "main"
+    "footer";
+    grid-template-rows: clamp(36px, 3em, 6em) 1fr 2em;
+    grid-template-columns: 1fr;
   }
 }
 
